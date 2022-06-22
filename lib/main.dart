@@ -5,6 +5,14 @@ void main(){
   runApp(MyApp());
 }
 
+void sun(){
+  print("sun");
+}
+
+void merc(){
+  print("merc");
+}
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
@@ -43,9 +51,26 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          "Milky Way", textScaleFactor: 3,
-      )
+        child: Stack(
+          children: [
+            Container(
+              child: Image.asset('assets/bg.jpg')
+            ),
+            Column(
+                children: [
+                  GestureDetector(
+                    onTap: sun,
+                    child: Image.asset('assets/sun.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: merc,
+                    child: Image.asset('assets/mercury.png', fit: BoxFit.cover),
+                  )
+              ]
+              ),
+
+          ]
+        )
       )
     );
   }
