@@ -6,11 +6,16 @@ void main(){
 }
 
 void sun(){
-  print("sun");
+  //print("sun");
+  //Navigator.push(context, MaterialPageRoute(builder: (context) => sunScreen()))
 }
 
 void merc(){
   print("merc");
+}
+
+void venus() {
+  print("venus");
 }
 
 class MyApp extends StatelessWidget {
@@ -54,23 +59,82 @@ class SecondScreen extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              child: Image.asset('assets/bg.jpg')
+              color: Colors.black,
+              child: Image.asset('assets/bg.jpg', width: 1200),
             ),
-            Column(
+            SingleChildScrollView(
+              child: Column(
                 children: [
+                  Container(
+                    child: Image.asset('assets/top.png')
+                  ),
                   GestureDetector(
-                    onTap: sun,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => sunScreen()));}, //shift to sunScreen
                     child: Image.asset('assets/sun.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
                     onTap: merc,
                     child: Image.asset('assets/mercury.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: venus,
+                    child: Image.asset('assets/ven.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: sun,
+                    child: Image.asset('assets/earth.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: merc,
+                    child: Image.asset('assets/mars.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: venus,
+                    child: Image.asset('assets/jupiter.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: sun,
+                    child: Image.asset('assets/saturn.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: merc,
+                    child: Image.asset('assets/uranus.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: venus,
+                    child: Image.asset('assets/neptune.png', fit: BoxFit.cover),
+                  ),
+                  GestureDetector(
+                    onTap: sun,
+                    child: Image.asset('assets/pluto.png', fit: BoxFit.cover),
                   )
               ]
-              ),
+              )
+            ),
 
           ]
         )
+      )
+    );
+  }
+}
+
+class sunScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment(-1.0, -0.9),
+              child: BackButton(
+                color: Colors.black,
+                onPressed: () {Navigator.pop(context);},
+              )
+            )
+          ],
+        ),
       )
     );
   }
