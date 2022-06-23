@@ -73,39 +73,39 @@ class SecondScreen extends StatelessWidget {
                     child: Image.asset('assets/sun.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: merc,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => mercScreen()));},
                     child: Image.asset('assets/mercury.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: venus,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => venusScreen()));},
                     child: Image.asset('assets/ven.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: sun,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => earthScreen()));},
                     child: Image.asset('assets/earth.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: merc,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => marsScreen()));},
                     child: Image.asset('assets/mars.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: venus,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => jupiterScreen()));},
                     child: Image.asset('assets/jupiter.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: sun,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => saturnScreen()));},
                     child: Image.asset('assets/saturn.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: merc,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => uranusScreen()));},
                     child: Image.asset('assets/uranus.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: venus,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => neptuneScreen()));},
                     child: Image.asset('assets/neptune.png', fit: BoxFit.cover),
                   ),
                   GestureDetector(
-                    onTap: sun,
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => plutoScreen()));},
                     child: Image.asset('assets/pluto.png', fit: BoxFit.cover),
                   )
               ]
@@ -126,16 +126,245 @@ class sunScreen extends StatelessWidget {
       body: Center(
         child: Stack(
           children: [
+            Container(
+              color: Colors.black,
+              child: Image.asset('assets/sunInfo.png', width: 1200)
+            ),
             Align(
-              alignment: Alignment(-1.0, -0.9),
+              alignment: Alignment(-1.0, -0.87),
               child: BackButton(
-                color: Colors.black,
+                color: Colors.white,
                 onPressed: () {Navigator.pop(context);},
               )
-            )
+            ),
           ],
         ),
       )
+    );
+  }
+}
+
+class mercScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/mercuryInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class venusScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/venusInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class earthScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/earthInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class marsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/marsInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class jupiterScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/jupiterInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class saturnScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/saturnInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class uranusScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/uranusInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class neptuneScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/neptuneInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class plutoScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                  color: Colors.black,
+                  child: Image.asset('assets/plutoInfo.png', width: 1200)
+              ),
+              Align(
+                  alignment: Alignment(-1.0, -0.87),
+                  child: BackButton(
+                    color: Colors.white,
+                    onPressed: () {Navigator.pop(context);},
+                  )
+              ),
+            ],
+          ),
+        )
     );
   }
 }
